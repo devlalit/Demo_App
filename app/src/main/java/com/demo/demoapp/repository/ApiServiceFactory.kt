@@ -69,9 +69,9 @@ open class ApiServiceFactory private constructor(var mContext: Context) {
                   ?.subscribe(Consumer<Response?> { call ->
                   //  CustomeProgressDialog(mContext).dismiss()
                     data!!.setValue(call)
-                    val gson = Gson()
-                    val jsonInString = gson.toJson(call)
-                    Log.e("getLogincall", "In onNext()$jsonInString")
+                   val gson = Gson()
+                      val jsonInString = gson.toJson(call)
+                      Log.e("getLogincall", "In onNext()$jsonInString")
                   // disposable.dispose();
                 }, Consumer<Throwable> { throwable ->
                     Log.e("throwable=", "" + throwable.message)

@@ -32,7 +32,7 @@ class DataListViewModel(
             getObservableLogin()?.observe(activity, object : Observer<Response?> {
                 override fun onChanged(t: Response?) {
                     if (t !== null) {
-                        if (t?.title.toString() == "About Canada" ) {
+                        if (t?.title.toString() .equals("About Canada")  ) {
                             Toast.makeText(activity, "Fetch the data successfully", Toast.LENGTH_SHORT)
                         } else {
 
