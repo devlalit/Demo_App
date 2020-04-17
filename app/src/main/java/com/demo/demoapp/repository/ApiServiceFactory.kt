@@ -61,9 +61,9 @@ open class ApiServiceFactory private constructor(var mContext: Context) {
             getInstance(mContext)
         }
     }
-    fun getLogin(): LiveData<Response?>? {
+    fun getData(): LiveData<Response?>? {
         val data: MutableLiveData<Response> = MutableLiveData()
-        apiService?.getLoginCall()
+        apiService?.getDataCall()
                   ?.subscribeOn(Schedulers.io())
                   ?.observeOn(AndroidSchedulers.mainThread())
                   ?.subscribe(Consumer<Response?> { call ->

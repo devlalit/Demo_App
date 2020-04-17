@@ -21,7 +21,7 @@ class DataListViewModel(
 
     var liveData: LiveData<Response?>? = null
     init {
-        liveData = ApiServiceFactory.getInstance(activity).getLogin()
+        liveData = ApiServiceFactory.getInstance(activity).getData()
         observeLoginViewModel()
     }
     fun getObservableLogin(): LiveData<Response?>? {

@@ -8,5 +8,5 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("facts.json")
-    fun getLoginCall(): Single<Response?>?
+    fun getDataCall(): Single<Response?>?
 }
